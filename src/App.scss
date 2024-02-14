@@ -5,23 +5,25 @@ body{
 
 }
 .music-player {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     background-color: #f3f3f3;
-    border:  1px solid black;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex; // Utilizamos flexbox para centrar la imagen
-    justify-content: center; // Centra horizontalmente la imagen
-    align-items: center; // Centra verticalmente la imagen
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     flex-direction: column;
-    background-size:contain;
+    background-size:cover;
     overflow: hidden;
 
     .blur{
         width: inherit;
         height: inherit;
         backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       
       .album-cover {
@@ -62,19 +64,51 @@ body{
       
       
       .song-details {
+        font-family: Arial, Helvetica, sans-serif;
         width: 100%;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+
+        border-radius: 5px;
     
-        color: white;
-    
-        text-shadow: 2px 2px 1px rgb(0, 0, 0);
-    
+      
+       
+
+        
+        div{
+          font-size: 16px;
+          text-shadow: 1px 1px 1px rgb(0, 0, 0);
+          text-align: start;
+          text-wrap: nowrap;
+          overflow: hidden;
+          overflow: hidden;
+          max-width: 80%;
+        }
+        .name {
+          color: rgb(0, 0, 0);
+          font-size: 24px;
+          text-shadow: 1px 1px 1px rgb(255, 255, 255);
+          font-weight: bold;
+          border: 2px solid gr;      
+        }
+        .year{
+          color: rgb(252, 252, 252);
+      
+          letter-spacing: 10px;
+        }
+        .autor{
+          color: rgb(255, 0, 0);
+          
+          font-size: 20px;
+        }
       }
       
       .controls {
      
         width: 100%;
+        max-height: 25%;
         display: flex;
         justify-content: center;
         flex-direction: column;
