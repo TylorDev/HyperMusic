@@ -1,0 +1,155 @@
+body{
+  display:  flex;
+  justify-content: center; // Justify -content centra todos los objetos en forma horizontal!!!!!
+  align-items: center;
+
+}
+.music-player {
+    width: 300px;
+    height: 300px;
+    background-color: #f3f3f3;
+    border:  1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; // Utilizamos flexbox para centrar la imagen
+    justify-content: center; // Centra horizontalmente la imagen
+    align-items: center; // Centra verticalmente la imagen
+    flex-direction: column;
+    background-size:contain;
+    overflow: hidden;
+
+    .blur{
+        width: inherit;
+        height: inherit;
+        backdrop-filter: blur(5px);
+      }
+      
+      .album-cover {
+        width: 100%; // El contenedor de la imagen ocupa el 50% del contenedor más grande
+        height: 50%;
+        max-height: 50%;
+    
+        border-radius: 10px;
+        display: flex; // Utilizamos flexbox para centrar la imagen
+        justify-content: center; // Centra horizontalmente la imagen
+        align-items: center; // Centra verticalmente la imagen
+       
+     
+    
+        #cover{
+            width: 100%;; // Ajustamos la imagen al 100% del contenedor
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        
+           
+        
+            img{
+                height: 100%;
+                 width: fit-content;
+                
+        
+               
+            }
+        } 
+        
+       
+        
+      
+      }
+     
+     
+      
+      
+      .song-details {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+        color: white;
+    
+        text-shadow: 2px 2px 1px rgb(0, 0, 0);
+    
+      }
+      
+      .controls {
+     
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    
+    
+    
+    
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            
+          }
+          
+          button:hover {
+            background-color: #45a049;
+          }
+          
+         
+          audio{
+       
+      
+            &::-webkit-media-controls-enclosure {
+                border-radius: 0px;
+                background-color: rgba(253, 253, 253, 0);
+                overflow: hidden;
+                
+            }
+            &::-webkit-media-controls-panel{
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                 gap: 50px;
+               
+             }
+        
+         
+            
+             &::-webkit-media-controls-timeline{
+            
+                position: absolute;
+                width:100%;    
+                z-index: 100;
+                padding: 100%;
+                
+            
+                
+             }
+            
+         }
+      }
+  }
+
+
+  
+ 
+
+
+
+ 
+
+
+
+
+
+  
+ 
+
+
+  
+
+ 
+
