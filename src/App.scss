@@ -33,24 +33,31 @@ body{
         display: flex; // Utilizamos flexbox para centrar la imagen
         justify-content: center; // Centra horizontalmente la imagen
         align-items: center; // Centra verticalmente la imagen
-       
-     
+        margin-top: 20px;
+
     
         #cover{
             width: 100%;; // Ajustamos la imagen al 100% del contenedor
             height: 100%;
             display: flex;
-            justify-content: center;
-        
-           
+            justify-content: center; 
+           margin-bottom: 20px;
         
             img{
                 height: 100%;
                  width: fit-content;
-                
-        
+                border-radius: 10px;
+                transition: all 1s;
                
             }
+
+            img:hover{
+             
+               margin-bottom: 100px;
+              border-radius: 50px;
+      
+             
+          }
         } 
         
        
