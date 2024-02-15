@@ -28,14 +28,14 @@ export const MusicPlayer = ({ music }) => {
     setIsPlaying(true); // Actualiza el estado de reproducción
   };
 
-  const { name, link, album } = music[currentSongIndex];
+  const {link, album } = music[currentSongIndex];
 
   return (
     <div className="music-player" style={{ backgroundImage: `url(${album})` }}>
       <div className="blur">
         {Album(album)}
 
-        {Metadata(name)}
+        <Metadata music={music[currentSongIndex]}></Metadata>
         
         {Controles(isPlaying, link, togglePlay, playNextSong)}
       </div>
