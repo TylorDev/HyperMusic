@@ -120,67 +120,97 @@ body{
       }
       
       .controls {
-     
+          font-family: Arial, Helvetica, sans-serif;
         width: 100%;
-        max-height: 25%;
+        height: auto;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        
     
-    
-    
+     .tiempo{
+     
+      color:  white;
+      font-size: 16px;
+      text-shadow: 1px 1px 1px rgb(0, 0, 0);
+     }
+
+        .timeline {
+          -webkit-appearance: none;
+          width: 100%;
+          height: .5em;
+          background-color: #d8d8d8;
+          border-radius: 5px;
+          background-size: 0% 100%;
+          background-repeat: no-repeat;
+          background-image: linear-gradient(rgb(0, 229, 229), rgba(0, 255, 234, 0.763));
+          margin-right: var(--space);
+        }
+        
+        .timeline::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          width: 1em;
+          height: 1em;
+          border-radius: 50%;
+          cursor: pointer;
+          opacity: 0;
+          transition: all .1s;
+          background-color: #008aad;
+        }
+        
+      
+      
+        
+        .timeline::-webkit-slider-thumb:hover {
+          background-color: #3f9294;
+        }
+        
+        .timeline:hover::-webkit-slider-thumb {
+          opacity: 1;
+        }
+        
+        .timeline::-moz-range-thumb:hover {
+          background-color: #3f9491;
+        }
+        
+        
+     
+       
+        
+
+
+
     
         button {
-            background-color: #4caf50;
-            color: white;
+            background-color: #00000064;
+            color: rgb(255, 255, 255);
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
             margin-right: 10px;
+            backdrop-filter: blur(10px); 
             
           }
           
           button:hover {
-            background-color: #45a049;
+            color: rgb(255, 255, 255);
+            background-color: #000000;
           }
           
          
-          audio{
-       
-      
-            &::-webkit-media-controls-enclosure {
-                border-radius: 0px;
-                background-color: rgba(253, 253, 253, 0);
-                overflow: hidden;
-                
-            }
-            &::-webkit-media-controls-panel{
-                display: flex;
-                justify-content: center;
-                flex-direction: row;
-                 gap: 50px;
-               
-             }
-        
-         
-            
-             &::-webkit-media-controls-timeline{
-            
-                position: absolute;
-                width:100%;    
-                z-index: 100;
-                padding: 100%;
-                
-            
-                
-             }
-            
+         audio{
+          display: none;
          }
       }
   }
 
+
+
+  
+
+ 
 
   
  
